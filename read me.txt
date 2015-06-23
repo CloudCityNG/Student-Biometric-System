@@ -1,3 +1,0 @@
-- Hope u have installed SQL Server, Visual Studio and FingerPrint SDK 2009.
-- Restore school_db.bak
-- Open Project StudentBiometricSystem with visual studio
