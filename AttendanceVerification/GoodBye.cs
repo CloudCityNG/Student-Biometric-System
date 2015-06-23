@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace AttendanceVerification
+{
+    public partial class GoodBye : Form
+    {
+       
+        public GoodBye(String name)
+        {
+            InitializeComponent();
+            lblName.Text = name;
+        }
+
+        private void GoodBye_Load(object sender, EventArgs e)
+        {
+            System.Threading.Thread.Sleep(1000);
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            this.Refresh();
+            System.Threading.Thread.Sleep(3000);
+            this.Close();
+        }
+    }
+}

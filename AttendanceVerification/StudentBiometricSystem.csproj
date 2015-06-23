@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95173056-7758-4A79-90FC-DCA4E050116D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AttendanceVerification</RootNamespace>
+    <AssemblyName>AttendanceVerification</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\DatabaseManipulate.cs" />
+    <Compile Include="Commons\DataFormat.cs" />
+    <Compile Include="Commons\DBHelper.cs" />
+    <Compile Include="Commons\fingerprintOPFormAuth.cs" />
+    <Compile Include="Commons\FingerprintOPFormUserMgt.cs" />
+    <Compile Include="Commons\ListViewRowColors.cs" />
+    <Compile Include="Commons\Messaging.cs" />
+    <Compile Include="Commons\OpenForms.cs" />
+    <Compile Include="Commons\PayStaffDetails.cs" />
+    <Compile Include="Commons\ProcessSalary.cs" />
+    <Compile Include="Commons\RecordPayTransactions.cs" />
+    <Compile Include="Commons\ReportHeader.cs" />
+    <Compile Include="Commons\TTemplate.cs" />
+    <Compile Include="Commons\Utilities.cs" />
+    <Compile Include="Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollFingerprints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollFingerprints.designer.cs">
+      <DependentUpon>EnrollFingerprints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodBye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodBye.Designer.cs">
+      <DependentUpon>GoodBye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDInputForm.Designer.cs">
+      <DependentUpon>IDInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalDetails.Designer.cs">
+      <DependentUpon>PersonalDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchAttendance.Designer.cs">
+      <DependentUpon>SearchAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentListReport.designer.cs">
+      <DependentUpon>StudentListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentList.Designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeAttendance.designer.cs">
+      <DependentUpon>TimeAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendanceData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeAttendanceData.designer.cs">
+      <DependentUpon>TimeAttendanceData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeAttendanceReport.Designer.cs">
+      <DependentUpon>TimeAttendanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EnrollFingerprints.resx">
+      <DependentUpon>EnrollFingerprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodBye.resx">
+      <DependentUpon>GoodBye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IDInputForm.resx">
+      <DependentUpon>IDInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalDetails.resx">
+      <DependentUpon>PersonalDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchAttendance.resx">
+      <DependentUpon>SearchAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffListReport.rdlc" />
+    <EmbeddedResource Include="StudentListReport.resx">
+      <DependentUpon>StudentListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentList.resx">
+      <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendance.resx">
+      <DependentUpon>TimeAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendanceData.resx">
+      <DependentUpon>TimeAttendanceData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAttendanceReport.rdlc" />
+    <EmbeddedResource Include="TimeAttendanceReport.resx">
+      <DependentUpon>TimeAttendanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Data.xsc">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
+    <None Include="Data.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data.xss">
+      <DependentUpon>Data.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Currency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finger Biometrics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finger.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprintreader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprintreader18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manual attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxGrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="GrFingerXLib">
+      <Guid>{A9995C7C-77BF-4E27-B581-A4B5BBD90E50}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
